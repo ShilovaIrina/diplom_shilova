@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui.helper;
+package ru.iteco.fmhandroid.ui.utils;
 
 import android.view.View;
 
