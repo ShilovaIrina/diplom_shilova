@@ -93,7 +93,7 @@ public class AuthorizationPage extends BaseClass {
     }
 
     public void inputValidLoginInFieldLogin(String validLogin) {
-        Allure.step("Шаг 4: Ввести в поле " + login + "значение " + validLogin);
+        Allure.step("Шаг 4: Ввести в поле логин валидное значение ");
         onView(withId(getFieldLoginID()))
                 .check(matches(isDisplayed()))
                 .perform(click());
@@ -101,7 +101,7 @@ public class AuthorizationPage extends BaseClass {
     }
 
     public void inputValidPasswordInFieldPassword(String validPassword) {
-        Allure.step("Шаг 5: Ввести в поле " + password + "значение " + validPassword);
+        Allure.step("Шаг 5: Ввести в поле пароль валидное значение");
         onView(withId(getFieldPasswordID()))
                 .check(matches(isDisplayed()))
                 .perform(click());
@@ -109,14 +109,14 @@ public class AuthorizationPage extends BaseClass {
     }
 
     public void clickInEnterButton() {
-        Allure.step("Шаг 6: Нажать на " + getEnterButton() );
+        Allure.step("Шаг 6: Нажать на кнопку Войти");
         onView(withId(getEnterButton()))
                 .check(matches(isDisplayed()))
                 .perform(click());
     }
 
     public void inputInvalidLoginInFieldLogin(String invalidLogin) {
-        Allure.step("Шаг 4: Ввести в поле " + login + "значение " + invalidLogin);
+        Allure.step("Шаг 4: Ввести в поле логин невалидное значение");
         onView(withId(getFieldLoginID()))
                 .check(matches(isDisplayed()))
                 .perform(click());
@@ -124,13 +124,13 @@ public class AuthorizationPage extends BaseClass {
     }
 
     public void viewLoginField() {
-        Allure.step("Шаг 4: Оставить поле " + login + "пустым");
+        Allure.step("Шаг 4: Оставить поле логин пустым");
         onView(withId(getFieldPasswordID()))
                 .check(matches(isDisplayed()));
     }
 
     public void viewPasswordField() {
-        Allure.step("Шаг 5: Оставить поле " + password + "пустым");
+        Allure.step("Шаг 5: Оставить поле пароль пустым");
         onView(withId(getFieldPasswordID()))
                 .check(matches(isDisplayed()));
     }

@@ -70,7 +70,7 @@ public class AboutApplicationPage extends BaseClass {
     }
 
     public void clickButtonAbout() {
-        Allure.step("Шаг 3: Нажать на " + buttonAbout);
+        Allure.step("Шаг 3: Нажать О Приложении");
         onView(withText(getButtonAboutText()))
                 .check(matches(isDisplayed()))
                 .perform(click());

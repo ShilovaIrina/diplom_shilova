@@ -108,42 +108,42 @@ public class NewsPage extends BaseClass {
     }
 
     public void inputCategory(String category) {
-        Allure.step("Шаг 2: Вести в поле " + categoryField + "Объявление");
+        Allure.step("Шаг 2: Вести в поле Катерория 'Объявление'");
         onView(withId(getCategoryFieldID()))
                 .check(matches(isDisplayed()))
                 .perform(replaceText(category), closeSoftKeyboard());
     }
 
     public void inputTitle(String title) {
-        Allure.step("Шаг 3: Вести в поле " + titleField + "Всем привет");
+        Allure.step("Шаг 3: Вести в поле Заголовок 'Всем привет'");
         onView(withId(getTitleFieldID()))
                 .check(matches(isDisplayed()))
                 .perform(replaceText(title), closeSoftKeyboard());
     }
 
     public void inputPublishDate(String date) {
-        Allure.step("Шаг 4: Вести в поле " + publishDate + "текущую дату");
+        Allure.step("Шаг 4: Вести в поле Дата Публикации текущую дату");
         onView(withId(getPublishDateID()))
                 .check(matches(isDisplayed()))
                 .perform(replaceText(date), closeSoftKeyboard());
     }
 
     public void inputPublishTime(String time) {
-        Allure.step("Шаг 5: Вести в поле " + publishTime + "текущее время");
+        Allure.step("Шаг 5: Вести в поле Время текущее время");
         onView(withId(getPublishTimeID()))
                 .check(matches(isDisplayed()))
                 .perform(replaceText(time), closeSoftKeyboard());
     }
 
     public void inputDescription(String description) {
-        Allure.step("Шаг 6: Вести в поле " + descriptionField + "хочу обратить ваше внимание");
+        Allure.step("Шаг 6: Вести в поле Описание значение 'хочу обратить ваше внимание'");
         onView(withId(getDescriptionFieldID()))
                 .check(matches(isDisplayed()))
                 .perform(replaceText(description), closeSoftKeyboard());
     }
 
     public void clickSaveButton() {
-        Allure.step("Шаг 7: Нажать на " + saveButton);
+        Allure.step("Шаг 7: Нажать на кнопку Сохранить");
         onView(withId(getSaveButtonID()))
                 .check(matches(isDisplayed()))
                 .perform(click());
@@ -151,37 +151,36 @@ public class NewsPage extends BaseClass {
 
     public void viewCreatedNews(String title) {
         Allure.step("Новость создана");
-
         onView(withId(R.id.news_list_recycler_view)).perform(actionOnItemAtPosition(8, click()));
         onView(allOf(withId(R.id.news_item_title_text_view), withText(title))).check(matches(isDisplayed()));
     }
 
     public void viewCategory() {
-        Allure.step("Шаг 2: Поле " + categoryField + "не заполнено");
+        Allure.step("Шаг 2: Поле Категория не заполнено");
         onView(withId(getCategoryFieldID()))
                 .check(matches(isDisplayed()));
     }
 
     public void viewTitle() {
-        Allure.step("Шаг 3: Поле " + titleField + "не заполнено");
+        Allure.step("Шаг 3: Поле Заголовок не заполнено");
         onView(withId(getTitleFieldID()))
                 .check(matches(isDisplayed()));
     }
 
     public void viewPublishDate() {
-        Allure.step("Шаг 4: Поле " + publishDate + "не заполнено");
+        Allure.step("Шаг 4: Поле Дата Публикации не заполнено");
         onView(withId(getPublishDateID()))
                 .check(matches(isDisplayed()));
     }
 
     public void viewPublishTime() {
-        Allure.step("Шаг 5: Поле " + publishTime + "не заполнено");
+        Allure.step("Шаг 5: Поле Время не заполнено");
         onView(withId(getPublishTimeID()))
                 .check(matches(isDisplayed()));
     }
 
     public void viewDescription() {
-        Allure.step("Шаг 6: Поле " + descriptionField + "не заполнено");
+        Allure.step("Шаг 6: Поле Описание не заполнено");
         onView(withId(getDescriptionFieldID()))
                 .check(matches(isDisplayed()));
     }
