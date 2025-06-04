@@ -13,11 +13,13 @@
 В первоначальном списке кандидатов на тестирование было 25 кейсов. Фактические автоматизировать 
 удалось 11 кейсов: 11, 12, 13, 62, 63, 66, 68, 71, 152, 153, 155
 
-Заведены баг-репорты на кейсы: 
+Заведены баг-репорты: 
 
-67 и 69 [https://github.com/ShilovaIrina/diplom_shilova/issues/7]
+Кейсы 67 и 69 [https://github.com/ShilovaIrina/diplom_shilova/issues/7]
 
-71 [https://github.com/ShilovaIrina/diplom_shilova/issues/9]
+Кейс 71 [https://github.com/ShilovaIrina/diplom_shilova/issues/9]
+
+Поломка блока Новости [https://github.com/ShilovaIrina/diplom_shilova/issues/10]
 
 От кейсов 90, 91, 101, 102, 103, 104, 105, 109, 110, 122, 129 пришлось отказаться от их автоматизации
 в виду отсутствия уникальных ID у новостных постов и их кнопок. Так же, причиной отказа от 
